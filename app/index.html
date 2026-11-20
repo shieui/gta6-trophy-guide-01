@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Leonida Trophy Guide: a tracker and guide for all 55 Grand Theft Auto VI PlayStation 5 trophies, with a roadmap to the platinum. Works offline.">
+<title>Leonida Trophy Guide — GTA VI · all 55 PS5 trophies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="title-block">
+    <p class="eyebrow">Grand Theft Auto VI · PlayStation 5</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">All 55 trophies — 1 platinum · 2 gold · 6 silver · 46 bronze · 28 hidden until earned. Every trophy is single-player and offline; there are no online trophies. Names, descriptions and grades are as PlayStation publishes them; every guide is written for this page and cites its sources.</p>
+  </div>
+  <div class="progress-box" id="progressBox">
+    <p class="progress-line"><strong id="progressText">0 of 55 earned</strong> <span id="progressPct">0%</span></p>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="bar-fill" id="barFill"></div></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+    <p class="next-hint" id="nextHint"></p>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button type="button" class="view-tab active" data-view="checklist" aria-current="true">Checklist</button>
+  <button type="button" class="view-tab" data-view="roadmap">Roadmap to platinum</button>
+  <button type="button" class="view-tab" data-view="next">Next up</button>
+</nav>
+
+<section class="controls" id="controls" aria-label="Checklist controls">
+  <label class="search-label">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+  <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+    <button type="button" class="chip active" data-kind="all">All 55</button>
+    <button type="button" class="chip" data-kind="story">Story</button>
+    <button type="button" class="chip" data-kind="missable">Missable</button>
+    <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+    <button type="button" class="chip" data-kind="activities">Activities</button>
+    <button type="button" class="chip" data-kind="online">Online</button>
+  </div>
+  <label class="grade-label">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check-label"><input id="earnedOnly" type="checkbox"> Earned only</label>
+  <label class="check-label spoiler-label"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+  <button type="button" id="themeToggle" class="tool-btn" title="Switch light / dark theme (T)">Dark theme</button>
+  <button type="button" id="exportBtn" class="tool-btn" title="Download your progress as a file">Export progress</button>
+  <label class="tool-btn import-btn" title="Load progress from an exported file">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+  <button type="button" id="resetBtn" class="tool-btn danger" title="Clear all earned ticks and notes">Reset</button>
+</section>
+
+<main>
+  <div class="layout" id="checklistLayout">
+    <section class="list-col" aria-label="Trophy checklist">
+      <p class="list-meta" id="listMeta"></p>
+      <div id="missableNote" class="callout" hidden></div>
+      <ul class="trophy-list" id="trophyList"></ul>
+      <p class="empty" id="emptyMsg" hidden>No trophies match these filters.</p>
+    </section>
+    <aside class="detail-col" aria-label="Trophy guide">
+      <div class="detail" id="detailPanel">
+        <p class="detail-empty">Pick a trophy in the list to read its guide, sources and notes here.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="roadmap-view" id="roadmapView" hidden aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">One playthrough is enough, and there is no difficulty setting and no mission replay — free roam carries on after the story, and the full 100% checklist opens once the credits have rolled. Published guides put the whole run at about 200 hours. Work the stages in order; the checklist above tracks every trophy in them.</p>
+    <div class="callout warn" id="roadmapMissable"></div>
+    <ol class="stages" id="stages"></ol>
+  </section>
+
+  <section class="next-view" id="nextView" hidden aria-label="Next up planner">
+    <h2>Next up</h2>
+    <p class="next-intro">The next trophies in roadmap order, given what you have already earned. Tick them off in the checklist and this list moves on.</p>
+    <ol class="next-list" id="nextList"></ol>
+  </section>
+</main>
+
+<footer>
+  <details class="shortcuts">
+    <summary>Keyboard shortcuts</summary>
+    <ul>
+      <li><kbd>/</kbd> search</li>
+      <li><kbd>1</kbd> checklist · <kbd>2</kbd> roadmap · <kbd>3</kbd> next up</li>
+      <li><kbd>S</kbd> hide / show story spoilers</li>
+      <li><kbd>T</kbd> light / dark theme</li>
+      <li><kbd>Esc</kbd> close the open guide</li>
+    </ul>
+  </details>
+  <section class="sources">
+    <h2>Sources</h2>
+    <p>Names, descriptions and grades are the official list as PlayStation publishes it, as carried by the trophy trackers Exophase and PSNProfiles. Counts — 42 Shooting Range golds, 14 drone race locations, 18 meditation spots, 9 activity types, a count to 500 — come from the published trophy lists. The missable and save advice comes from the published guides below. Every guide on this page is written in our own words; a source is cited, never copied. Where a place or step is not pinned down in any published list yet, the guide says so plainly.</p>
+    <ul>
+      <li><a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 trophy and achievement guide</a> (roadmap; story trophies can't be missed; Positive Mental Attitude the only possibly missable trophy; no mission replay)</li>
+      <li><a href="https://outputlag.com/guides/gta-6-trophy-list/">OutputLag — GTA 6 trophy list</a> (Chapter 1 balcony meditation spot; no mission replay; save before every chapter and the final mission)</li>
+      <li><a href="https://howtovideogame.com/gta-6-trophies/">HowToVideoGame — GTA 6 trophy and achievement list</a> (the 28 hidden trophies: 12 story, 16 others; counts for activities, ranges, drone races, meditation spots and choices)</li>
+      <li><a href="https://egamers.io/gta-6-trophy-list-all-55-trophies-and-achievements-plus-the-hardest-ones/">EGamers — GTA 6 trophy list</a> (reporting PowerPyx: about 200 hours, difficulty 4 out of 10; A Long Road the hardest)</li>
+      <li><a href="https://lfcarry.com/guides/gta-6-platinum-trophy-guide">LFCarry — GTA 6 platinum trophy guide</a> (rotate manual save slots before major chapter decisions)</li>
+      <li>Exophase and PSNProfiles — the official trophy list (names, descriptions, grades)</li>
+    </ul>
+  </section>
+  <p class="fineprint">Leonida Trophy Guide is an unofficial fan guide. It is not affiliated with Rockstar Games, Sony or PlayStation, and it shows no Rockstar logo or official artwork. Everything on this page loads from its own files and works with the network off; your progress never leaves your browser except in a file you choose to export. Data checked 2026-11-19; the game launched 2026-11-19, so some steps are still being confirmed by players — where a guide is not yet checked in the game, it says so.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
